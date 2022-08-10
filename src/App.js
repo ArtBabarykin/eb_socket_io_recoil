@@ -1,4 +1,3 @@
-import "./App.css";
 import ChannelsList from "./components/ChannelsList";
 
 function App() {
