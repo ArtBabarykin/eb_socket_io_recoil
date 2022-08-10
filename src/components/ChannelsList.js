@@ -1,13 +1,17 @@
 import Item from "./Item";
-import Item2 from "./Item2";
+import { itemState } from "../recoil/atoms";
+import { useRecoilValue } from "recoil";
 
-const ChannelsList = () => {
+const ChannelList = ({ id }) => {
+  const items = useRecoilValue(itemState(id));
+
   return (
     <div>
-      <Item />
-      <Item2 />
+      {items.map((p) => (
+        <Item key={p.id} content={p.content} id={id} />
+      ))}
     </div>
   );
 };
 
-export default ChannelsList;
+export default ChannelList;

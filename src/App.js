@@ -2,7 +2,7 @@ import ChannelsList from "./components/ChannelsList";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ textAlign: "center" }}>
       <ChannelsList />
     </div>
   );
